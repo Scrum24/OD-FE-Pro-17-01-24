@@ -19,11 +19,10 @@ if (operation === 'add') {
     const res = num1 / num2;
     message = createResultMessage("/", num1, num2, res);
 } else {
+
     message = "Error. Something went wrong."
 }
-
 window.alert(message);
-
 
 
 function getOperation() {
