@@ -1,11 +1,10 @@
-const yearOfBirthQuestion = 'Hi. Please, enter your year of birth. Thank you!';
-const yearOfBirth = window.prompt(yearOfBirthQuestion);
+const YEAR_OF_BIRTH_QUESTION = 'Hi. Please, enter your year of birth. Thank you!';
+const CITY_QUESTION = 'Please, enter the name of the city do you live (Kyiv, Washington, London or ..). Thank you!';
+const SPORT_QUESTION = 'Please, enter your favorite sport (bodybuilding, chess, swimming or ..). Thank you!';
 
-const cityQuestion = 'Please, enter the name of the city do you live (Kyiv, Washington, London or ..). Thank you!';
-const city = window.prompt(cityQuestion);
-
-const sportQuestion = 'Please, enter your favorite sport (bodybuilding, chess, swimming or ..). Thank you!';
-const sport = window.prompt(sportQuestion);
+const yearOfBirth = window.prompt(YEAR_OF_BIRTH_QUESTION);
+const city = window.prompt(CITY_QUESTION);
+const sport = window.prompt(SPORT_QUESTION);
 
 
 const allVarsEntered = areAllVarsEntered(yearOfBirth, city, sport);
