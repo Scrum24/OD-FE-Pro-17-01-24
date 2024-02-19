@@ -8,7 +8,7 @@ class Human {
         this.#age = age;
     }
 
-    getHumanInfo() {
+    printHumanInfo() {
         console.log(`Human info | Name: ${this.#name}, age: ${this.#age}`);
     }
 
@@ -18,7 +18,7 @@ class Human {
 }
 
 const human = new Human("Tom", 20);
-human.getHumanInfo();
+human.printHumanInfo();
 
 
 //case №2
@@ -51,9 +51,9 @@ class Car {
         this.#printOwnerInfo();
     }
 
-    #printOwnerInfo(){
+    #printOwnerInfo() {
         if (this.#owner) {
-            this.#owner.getHumanInfo();
+            this.#owner.printHumanInfo();
         } else {
             console.log(`Car info | Owner was not added yet`);
         }
@@ -66,7 +66,7 @@ car.printFullCarInfo();
 
 //cases
 const human1 = new Human("Tom", 17);
-human1.getHumanInfo();
+human1.printHumanInfo();
 
 car.setOwner(human1);
 car.printFullCarInfo();
