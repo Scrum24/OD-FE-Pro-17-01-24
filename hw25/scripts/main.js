@@ -9,7 +9,7 @@ function createCustomList(){
     const main = document.getElementsByTagName('main')[0];
     main.appendChild(list);
 
-    },1000);
+    },0);
 }
 
 function getArray(){
