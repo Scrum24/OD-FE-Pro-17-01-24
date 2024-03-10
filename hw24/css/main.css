@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    border: 1px solid darkgray;
+    min-height: 100vh;
+}
+
+header{
+    padding: 50px 20px;
+    background: #efefef;
+}
+
+main{
+    padding: 20px;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.slides {
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+}
+
+.slides > img {
+    display: none;
+}
+
+.slides > img.isActive {
+    display: block;
+}
+
+.slider button {
+    padding: 3px 10px;
+}
+
+.slider button:hover {
+    cursor: pointer;
+}
+
+.slider .left-btn{
+    order: -1;
+}
+
+.slider button.isHide{
+    visibility: hidden;
+}
