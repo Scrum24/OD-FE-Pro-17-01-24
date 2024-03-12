@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW №27</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1>HW №27 (Registration form and table..)</h1>
+    </header>
+
+    <main>
+
+        <form action="/target-form-url" id="registration-form" method="post" autocomplete="on">
+            <div class="line">
+                <label for="firstName">First name:</label>
+                <input type="text" name="firstName" id="firstName" minlength="2" maxlength="15" required>
+            </div>
+            <div class="line">
+                <label for="lastName">Last name:</label>
+                <input type="text" name="lastName" id="lastName" maxlength="25">
+            </div>
+            <div class="line">
+                <label for="dateOfBirth">Date of birth:</label>
+                <input type="text" name="dateOfBirth" id="dateOfBirth" maxlength="25">
+            </div>
+            <div class="line">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" minlength="2" maxlength="25" required>
+            </div>
+
+            <div class="lines">
+                <p>Select your gender:</p>
+                <div>
+                    <input type="radio" id="male" value="male" name="gender-group">
+                    <label for="male">male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" value="female" name="gender-group">
+                    <label for="female">female</label>
+                </div>
+            </div>
+
+            <div class="line">
+                <label for="city-field">Choose your city:</label>
+                <select name="city" id="city-field">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Singapore">Singapore</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="address">Your address:</label>
+                <textarea name="address" id="address" cols="30" rows="10" maxlength="1000"></textarea>
+            </div>
+
+
+            <div class="lines">
+                <p>Your language:</p>
+                <div>
+                    <input type="checkbox" id="UA" value="UA" name="language-group">
+                    <label for="UA">UA</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="EN" value="EN" name="language-group">
+                    <label for="EN">EN</label>
+                </div>
+            </div>
+
+            <div class="btns">
+                <button type="submit" id="submit">Submit</button>
+                <button type="reset" id="reset">Reset</button>
+            </div>
+        </form>
+
+    </main>
+</div>
+
+<script src="./scripts/main.js"></script>
+</body>
+
+</html>
