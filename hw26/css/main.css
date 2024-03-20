@@ -6,8 +6,8 @@
 
 body {
     background-color: #f1f8fb;
+    position: relative;
 }
-
 
 
 .container {
@@ -25,17 +25,23 @@ body {
     gap: 10px;
 }
 
-.main-screen > div {
+.nav,
+.order,
+.products,
+.product-card {
     background-color: #e8f1f5;
     border-radius: 5px;
     padding: 10px;
+
+    margin-bottom: 10px;
+    align-self: start;
 }
 
 
-
 .nav__title,
+.order__title,
 .products__title,
-.product-card__title{
+.product-card__title {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -43,12 +49,7 @@ body {
 }
 
 
-
-.nav {
-    background-color: #f1f8fb;
-    align-self: start;
-}
-
+.order__content,
 .nav__item a {
     margin-bottom: 10px;
 
@@ -67,13 +68,13 @@ body {
 }
 
 
-
+.order,
 .products,
-.product-card{
+.product-card {
     position: relative;
 }
 
-.close-btn{
+.close-btn {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -82,14 +83,13 @@ body {
     border-radius: 3px;
 }
 
-.close-btn:hover{
+.close-btn:hover {
     background: #f1f8fb;
 }
 
-.isHide{
+.isHide {
     display: none;
 }
-
 
 
 .product {
@@ -104,7 +104,7 @@ body {
     gap: 15px;
 }
 
-.product:last-child{
+.product:last-child {
     margin-bottom: 0;
 }
 
@@ -112,12 +112,12 @@ body {
     background: #f1f8fb;
 }
 
-.product__img img{
+.product__img img {
     width: 100%;
     height: auto;
 }
 
-.product__title{
+.product__title {
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -128,15 +128,14 @@ body {
     justify-content: end;
 }
 
-.product__details a{
+.product__details a {
     text-decoration: none;
     color: black;
 }
 
-.product__details a:hover{
+.product__details a:hover {
     border-bottom: 1px solid black;
 }
-
 
 
 .product-card {
@@ -173,7 +172,7 @@ body {
     margin-bottom: 5px;
 }
 
-.card__title{
+.card__title {
     font-weight: bold;
 }
 
@@ -195,4 +194,122 @@ body {
 
 .card__buy-btn:hover {
     background-color: #54d226;
+}
+
+
+/* modal block*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.isHideModal {
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal-window {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #90d3f4;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+form {
+    border: 3px solid #e8f1f5;
+    background: white;
+
+    padding: 15px;
+    border-radius: 5px;
+    width: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 2px solid #e8f1f5;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border: 2px solid #90d3f4;
+}
+
+input[type="radio"] {
+    width: auto;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.radio {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    gap: 10px;
+}
+
+select {
+    border: 2px solid #e8f1f5;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    max-height: 200px;
+}
+
+.product-info,
+.full-name,
+.comment-block {
+    grid-column: 2 span;
+}
+
+.buttons {
+    grid-column: 2 span;
+
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.close-btn {
+    border: 2px solid #e8f1f5;
+}
+
+button {
+    border: 2px solid #e8f1f5;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.close-btn:hover,
+button:hover {
+    background: #a6ddf8;
+    border: 2px solid #90d3f4;
+}
+
+label {
+    display: block
 }
