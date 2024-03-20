@@ -16,12 +16,13 @@
     </div>
 
     <div class="main-screen">
-
-        <div class="nav" id="nav">
-            <div class="nav__title">Categories:</div>
-            <div class="nav__item"><a href="#" data-targ-category="monitors">Monitors</a></div>
-            <div class="nav__item"><a href="#" data-targ-category="laptops">Laptops</a></div>
-            <div class="nav__item"><a href="#" data-targ-category="phones">Phones</a></div>
+        <div id="aside">
+            <div class="nav" id="nav">
+                <div class="nav__title">Categories:</div>
+                <div class="nav__item"><a href="#" data-targ-category="monitors">Monitors</a></div>
+                <div class="nav__item"><a href="#" data-targ-category="laptops">Laptops</a></div>
+                <div class="nav__item"><a href="#" data-targ-category="phones">Phones</a></div>
+            </div>
         </div>
 
         <div class="products isHide" id="products">
@@ -35,8 +36,85 @@
             <div class="product-card__title">Product card</div>
             <div class="product-card__content"></div>
         </div>
-
     </div>
+</div>
+
+<div class="modal isHideModal" id="buy-form-modal-w">
+    <div class="modal-window">
+        <form action="/buy-form" method="post" autocomplete="on" id="buy-form">
+            <div class="close-btn">x</div>
+            <div class="product-info">
+                <p>You want to buy "<span id="form-prod-title">...</span>" (price: <span
+                        id="form-prod-price">...</span>).</p>
+                <p>Please fill out the form.</p>
+                <hr>
+            </div>
+
+            <div class="full-name">
+                <label for="full-name">Full name:</label>
+                <input type="text" id="full-name" name="fullName" minlength="5" maxlength="45" required>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" minlength="2" maxlength="25" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" minlength="5" maxlength="15" required>
+            </div>
+
+
+            <div>
+                <label for="city">City:</label>
+                <select name="city" id="city">
+                    <option value="-" disabled selected>Select your city</option>
+                    <option value="Kyiv">Kyiv</option>
+                    <option value="Lviv">Lviv</option>
+                    <option value="Odessa">Odessa</option>
+                    <option value="Kharkiv">Kharkiv</option>
+                    <option value="Dnipro">Dnipro</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="warehouse">Nova Poshta warehouse:</label>
+                <input type="text" id="warehouse" name="warehouse">
+            </div>
+
+            <div>
+                <p>Payment method:</p>
+
+                <div class="radio">
+                    <input type="radio" id="postpaid" value="postpaid" name="payment">
+                    <label for="postpaid">postpaid</label>
+                </div>
+
+                <div class="radio">
+                    <input type="radio" id="card-payment" value="card-payment" name="payment">
+                    <label for="card-payment">card payment</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="prod-count">Products count:</label>
+                <input type="text" id="prod-count" name="prodCount">
+            </div>
+
+            <div class="comment-block">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" cols="30" rows="10" maxlength="1000"></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="overlay"></div>
 </div>
 
 <script src="./scripts/main.js"></script>
