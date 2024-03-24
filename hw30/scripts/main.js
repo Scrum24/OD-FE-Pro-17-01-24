@@ -64,7 +64,7 @@ function prepareSuccessfulInfoHTML(weatherInfo) {
             
             <div class="weather-info__icon">
                 <b>Icon:</b>
-                <img src="http://openweathermap.org/img/w/${weather.icon}.png" alt="Weather info img">
+                <img src="https://openweathermap.org/img/w/${weather.icon}.png" alt="Weather info img">
             </div>
         </div>`;
 }
