@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f8fb;
+    position: relative;
+}
+
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #a6ddf8;
+}
+
+.weather-info__header{
+    margin-bottom: 20px;
+}
+
+.weather-info__icon > *{
+    display: block;
+}
+
+.weather-info__content p{
+    margin-bottom: 5px;
+}
+
+.weather-info__icon{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
