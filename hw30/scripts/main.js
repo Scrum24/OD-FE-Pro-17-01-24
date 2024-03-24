@@ -11,7 +11,7 @@ function getWeatherInfoFor(city, appId) {
     let weatherInfo;
 
     const xml = new XMLHttpRequest();
-    let URL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${appId}`;
+    let URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${appId}`;
     xml.open('GET', URL, false);
     xml.onload = (e) => {
         weatherInfo = e.target.response;
