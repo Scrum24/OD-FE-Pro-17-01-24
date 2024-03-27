@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW №31</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1>HW №31 (Promise)</h1>
+    </header>
+
+    <main>
+        <form action="/search" method="post" autocomplete="on" id="search-from">
+            <div>
+                <label for="post-id">Please, enter the post id (between 1 and 100):</label>
+                <input type="number" name="post-id" id="post-id" min="1" max="100" value="1" required>
+            </div>
+
+            <div class="buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+
+        <div class="posts" id="posts"></div>
+    </main>
+</div>
+
+<script src="./scripts/main.js"></script>
+</body>
+
+</html>
