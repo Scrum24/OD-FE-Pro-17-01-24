@@ -19,12 +19,15 @@ function getPost(postId) {
 }
 
 function createPost(post) {
+    const title = ucFirst(post.title);
+    const body = ucFirst(post.body);
+
     return `<div class="post" data-post-id="${post.id}">
                 <div class="close-btn">x</div>
                 <div class="post__content">
-                    <div class="post__number"><b>Post №:</b>${post.id}</div>
-                    <div class="post__title"><b>Title:</b>${post.title}</div>
-                    <div class="post__description"><b>Description:</b>${post.description}</div>
+                    <div class="post__number"><b>Post №: </b>${post.id}</div>
+                    <div class="post__title"><b>Title: </b>${title}</div>
+                    <div class="post__description"><b>Description: </b>${body}</div>
                     <div class="post__comments-btn">Comments</div>
                 </div>
                 <div class="post__comments"></div>
@@ -68,11 +71,14 @@ function getComments(postId) {
 function createCommentsHTMLBlock(comments) {
     const commentsList = [];
     for (let comment of comments) {
+        const name = ucFirst(comment.name);
+        const body = ucFirst(comment.body);
+
         const newEl =
             `<div class="comment">
-                <div class="comment__number"><b>Comment №:</b>${comment.id}</div>
-                <div class="comment__title"><b>Comment title:</b>${comment.name}</div>
-                <div class="comment__description"><b>Comment description:</b>${comment.body}</div>
+                <div class="comment__number"><b>Comment №: </b>${comment.id}</div>
+                <div class="comment__title"><b>Title: </b>${name}</div>
+                <div class="comment__description"><b>Description: </b>${body}</div>
              </div>`;
         commentsList.push(newEl);
     }
@@ -90,4 +96,10 @@ function deactivateBtn(btn) {
     if (!btn.classList.contains(deactivatedClass)) {
         btn.classList.add(deactivatedClass);
     }
+}
+
+function ucFirst(str) {
+    if (!str) return str;
+
+    return str[0].toUpperCase() + str.slice(1);
 }
