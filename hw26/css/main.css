@@ -4,11 +4,20 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
 body {
     background-color: #f1f8fb;
     position: relative;
 }
 
+.header a {
+    text-decoration: none;
+    color: black;
+}
 
 .container {
     max-width: 1024px;
@@ -27,6 +36,7 @@ body {
 
 .nav,
 .order,
+.orders,
 .products,
 .product-card {
     background-color: #e8f1f5;
@@ -39,6 +49,7 @@ body {
 
 
 .nav__title,
+.orders__title,
 .order__title,
 .products__title,
 .product-card__title {
@@ -294,6 +305,8 @@ textarea {
     gap: 10px;
 }
 
+.order__delete-btn,
+.order__show-details-btn,
 .close-btn {
     border: 2px solid #e8f1f5;
 }
@@ -304,12 +317,59 @@ button {
     border-radius: 5px;
 }
 
+button:hover,
 .close-btn:hover,
-button:hover {
+.order__delete-btn:hover,
+.order__show-details-btn:hover {
     background: #a6ddf8;
     border: 2px solid #90d3f4;
 }
 
 label {
     display: block
+}
+
+
+
+/* orders */
+.orders__show-btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+
+    background: #bee2fa;
+    border: 2px solid #c5e8fa;
+}
+
+.orders__show-btn:hover {
+    background: #a6ddf8;
+    border: 2px solid #a6d5f3;
+}
+
+.isDeactivated {
+    pointer-events: none;
+    background-color: #f1f8fb;
+}
+
+.order__buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.order__delete-btn,
+.order__show-details-btn {
+    top: 5px;
+    right: 5px;
+    background-color: #ffffff;
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.main .order {
+    border: 1px solid transparent;
+}
+
+.main .order:hover {
+    border: 1px solid #dae9ef;
 }

@@ -12,7 +12,7 @@
 <body>
 <div class="container">
     <div class="header">
-        <h1>Internet store</h1>
+        <h1><a href="./index.html">Internet store</a></h1>
     </div>
 
     <div class="main-screen">
@@ -23,12 +23,18 @@
                 <div class="nav__item"><a href="#" data-targ-category="laptops">Laptops</a></div>
                 <div class="nav__item"><a href="#" data-targ-category="phones">Phones</a></div>
             </div>
+
+            <div class="orders" id="orders">
+                <div class="orders__show-btn">My orders</div>
+            </div>
         </div>
 
-        <div class="products isHide" id="products">
-            <div class="close-btn">x</div>
-            <div class="products__title">Products:</div>
-            <div class="products__list"></div>
+        <div class="main" id="main">
+            <div class="products isHide" id="products">
+                <div class="close-btn">x</div>
+                <div class="products__title">Products:</div>
+                <div class="products__list"></div>
+            </div>
         </div>
 
         <div class="product-card isHide" id="product-card">
@@ -108,8 +114,8 @@
             </div>
 
             <div class="buttons">
-                <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
     </div>
