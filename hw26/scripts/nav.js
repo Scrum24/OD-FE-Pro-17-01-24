@@ -1,6 +1,5 @@
 import {closeProductCard} from "./cleaning.js";
 import {getProductsFor} from "./data.js";
-// export * from "./nav.js";
 
 //nav block
 const nav = document.getElementById("nav");
@@ -44,5 +43,7 @@ function actualizeProductsPage(productsListHTML) {
     productsListParent.innerHTML = productsListHTML;
 }
 
-
-
+export function hideNavMenu() {
+    const nav = document.getElementById("nav");
+    nav.classList.add("isHide");
+}
